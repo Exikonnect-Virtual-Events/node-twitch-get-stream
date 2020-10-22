@@ -8,7 +8,7 @@ prompt.get(['channelName'], function (err, result) {
     twitchStreams.get(result.channelName)
         .then(function (streams) {
             for (var stream of streams) {
-                if (stream.resolution === '1280x720' && stream.quality === '720p60') {
+                if (stream.resolution === '640x360' && stream.quality === '360p30') {
                     console.log('m3u8 Link: ' + stream.url);
                 }
             }
